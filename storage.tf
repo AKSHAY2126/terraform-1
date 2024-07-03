@@ -2,13 +2,17 @@ provider "azurerm" {
   features {}
 }
 
-module "storage_account" {
-  source = "./module-1"
+# main.tf in the root module
 
-  storage_account_name   = var.storage_account_name
-  resource_group_name    = azurerm_resource_group.myrg.name  # Reference the existing resource group
-  location               = azurerm_resource_group.myrg.location  # Reference the existing resource group's location
+# main.tf in the root module
+
+module "storage_account" {
+  source              = "./azure-storage-module"
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  storage_account_name = var.storage_account_name
 }
+
 
 resource "random_id" "random_suffix" {
   byte_length = 4
