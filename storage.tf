@@ -1,3 +1,7 @@
+provider "azurerm" {
+  features {}
+}
+
 module "storage_account" {
   source = "./module-1"
 
@@ -5,6 +9,7 @@ module "storage_account" {
   resource_group_name    = var.resource_group_name
   location               = var.location
 }
+
 resource "random_id" "random_suffix" {
   byte_length = 4
 }
