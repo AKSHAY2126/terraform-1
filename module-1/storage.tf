@@ -1,5 +1,6 @@
-resource "random_string" "suffix" {
-  length  = 6  # Adjust the length as needed
+resource "random_string" "myrandom" {
+  length = 16
+  upper = false 
   special = false
 }
 
