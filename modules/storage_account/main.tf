@@ -8,7 +8,6 @@ resource "random_string" "storage_account_name" {
   special = false
   upper   = false
   lower   = true
-  number  = true
 }
 
 resource "azurerm_storage_account" "sa" {
@@ -24,7 +23,6 @@ resource "random_string" "container_name" {
   special = false
   upper   = false
   lower   = true
-  number  = true
 }
 
 resource "azurerm_storage_container" "container" {

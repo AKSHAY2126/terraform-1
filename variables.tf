@@ -8,15 +8,17 @@ variable "location" {
   type        = string
 }
 
-# variable "storage_account_name" {
-#   description = "The name of the storage account."
-#   type        = string
-# }
+variable "storage_account_name" {
+  description = "The name of the storage account."
+  type        = string
+  default = "mystorage4567"
+}
 
-# variable "container_name" {
-#   description = "The name of the storage container."
-#   type        = string
-# }
+variable "container_name" {
+  description = "The name of the storage container."
+  type        = string
+  default = "mycontainer6787"
+}
 
 variable "vnet_name" {
   description = "The name of the virtual network."
