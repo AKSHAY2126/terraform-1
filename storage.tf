@@ -14,7 +14,7 @@ resource "random_id" "random_suffix" {
   byte_length = 4
 }
 
-resource "azurerm_storage_container" "demo1" {
+resource "azurerm_storage_container" "container-1" {
   name                  = "c1-${random_id.random_suffix.hex}"
   storage_account_name  = var.storage_account_name
   container_access_type = "private"
