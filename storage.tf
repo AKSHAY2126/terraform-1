@@ -3,7 +3,7 @@ provider "azurerm" {
 }
 
 module "storage_account" {
-  source = "./module/module-1/storage.tf"
+  source = "./module-1"
 
   storage_account_name   = var.storage_account_name
   resource_group_name    = var.resource_group_name
