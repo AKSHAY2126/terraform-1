@@ -12,6 +12,6 @@ module "storage_account" {
 
 resource "azurerm_storage_container" "demo1" {
   name                  = "c1"
-  storage_account_name  = azurerm_storage_account.demo1.name
+  storage_account_name  = var.storage_account_name
   container_access_type = "private"
 }
